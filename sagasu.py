@@ -10,7 +10,8 @@ args = sys.argv[1:len(sys.argv)]    # Search terms
 output = str(subprocess.check_output(["ls"]))
 output = output[2:len(output)-3].split("\\n")
 
-for file in output:
+while output != []:
+    file = output.pop(0)
     ls = str(subprocess.check_output(["ls", file]))
     if(ls[2:len(ls)-3] == file):                # Check, whether it is a file
         for arg in args:
@@ -26,6 +27,5 @@ for file in output:
     else:                                       # Extract dir
         for el in ls[2:len(ls)-3].split("\\n"):
             output.append(file+"/"+el)
-        output.remove(file)
 
 print()
