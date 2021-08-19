@@ -1,6 +1,6 @@
 # sagasu
 
-Running this script on a Linux machine will let you search recursively through any directory available from your current directory position for a specific search term. If there is a hit, the file name and the corresponding lines, containing the requested phrase, will be printed out.
+Running this script on a Linux machine will let you search recursively through any directory available from your current directory position for a regular expression. If there is a hit, the file name and the corresponding lines, containing the requested phrase, will be printed out.
 
 ## Example
 
