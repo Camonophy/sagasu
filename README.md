@@ -13,10 +13,10 @@ sagasu 'yellow'
 
 will search in any file, that can be reached from the _Documents_ folder, for a line that contains the word *_yellow_*.
 The result could be somthing like this:
+```sh
+src/File.cs:
 
-> src/File.cs:
->
-> Console.WriteLine('yellow blue red');
-
+Console.WriteLine('yellow blue red');
+```
 
 
