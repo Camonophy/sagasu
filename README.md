@@ -5,10 +5,11 @@ Running this script on a Linux machine will let you search recursively through a
 ## Example
 
 Executing the following lines
+```sh
+cd ~/Documents
 
-> cd ~/Documents
-
-> sagasu 'yellow'
+sagasu 'yellow'
+```
 
 will search in any file, that can be reached from the _Documents_ folder, for a line that contains the word *_yellow_*.
 The result could be somthing like this:
