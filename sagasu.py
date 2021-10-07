@@ -15,7 +15,7 @@ output = output[2:len(output)-3].split("\\n")
 while output != []:
     file = output.pop(0)
     ls = str(subprocess.check_output(["ls", file]))
-    if(ls[2:len(ls)-3] == file and not(is_binary(file))):                # Check, whether it is a file
+    if(ls[2:len(ls)-3] == file and not(is_binary(file, False))):                # Check, whether it is a file
         for arg in args:
             try:
                 found = str(subprocess.check_output(["grep", "-n", arg, file]))
@@ -26,7 +26,7 @@ while output != []:
                 print()
             except:
                 continue
-    elif(is_binary(file)):
+    elif(is_binary(file, False)):
         continue
     else:                                       # Extract dir
         for el in ls[2:len(ls)-3].split("\\n"):
