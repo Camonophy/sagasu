@@ -11,8 +11,8 @@ cd ~/Documents
 sagasu 'yellow'
 ```
 
-will search in any file, that can be reached from the _Documents_ folder, for a line that contains the word *_yellow_*.
-The result could be somthing like this:
+will search in any file that can be found from the _Documents_ directory for a line that contains the word *_yellow_*.
+The output should be something like this:
 ```sh
 src/File.cs:
 
