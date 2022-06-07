@@ -5,8 +5,7 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-DIR=$(pwd)
-
-echo -e "#!/bin/bash \\n \\npython3 $DIR/sagasu.py \$@" >> sagasu
-sudo chmod 777 sagasu 
-mv sagasu /bin/
+pip uninstall binaryornot
+python -m pip install git+https://github.com/Camonophy/binaryornot.git
+sudo cp sagasu.py /bin/sagasu
+sudo chmod 777 /bin/sagasu
